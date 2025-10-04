@@ -1,0 +1,200 @@
+/* Animations for deposit and withdraw */
+@keyframes depositAnim {
+  0% { box-shadow: 0 0 0px #ffd700; }
+  50% { box-shadow: 0 0 30px #ffd700; }
+  100% { box-shadow: 0 0 0px #ffd700; }
+}
+
+@keyframes withdrawAnim {
+  0% { box-shadow: 0 0 0px #e63946; }
+  50% { box-shadow: 0 0 30px #e63946; }
+  100% { box-shadow: 0 0 0px #e63946; }
+}
+
+.animate-deposit {
+  animation: depositAnim 1s ease;
+}
+
+.animate-withdraw {
+  animation: withdrawAnim 1s ease;
+}
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #111;
+}
+
+.sidebar {
+  width: 230px;
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 18px 20px;
+  gap: 8px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.sidebar button {
+  margin: 5px 0;
+  padding: 10px;
+  border: none;
+  background-color: #222;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.sidebar button:hover {
+  background-color: #333;
+}
+
+.logout-btn {
+  margin-top: 14px;
+  background-color: #fff;
+  color: #111;
+}
+
+.logout-btn:hover {
+  background-color: #eee;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #222;
+  display: flex;
+  align-items: flex-start;
+}
+
+.tab-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 24px rgba(0,0,0,0.18);
+  max-width: 500px;
+  min-width: 400px;
+  transition: box-shadow 0.3s;
+}
+/* Professional disclaimer / info side panel */
+.right-panel {
+  flex: 1;
+  margin-left: 40px;
+  background: radial-gradient(circle at 30% 20%, #1e1e1e, #121212 70%);
+  border: 1px solid #2a2a2a;
+  border-radius: 18px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #e3e3e3;
+  font-size: 0.95rem;
+  padding: 36px 34px 30px;
+  position: sticky;
+  top: 40px;
+  box-shadow: 0 10px 32px -6px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04);
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+}
+.right-panel:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(38,198,218,0.15), rgba(255,255,255,0) 60%);
+  pointer-events: none;
+}
+.right-panel h3 {
+  margin: 0 0 20px;
+  font-size: 1.15rem;
+  letter-spacing: .6px;
+  color:#fff;
+  font-weight:600;
+  position: relative;
+}
+.right-panel h3:after {
+  content:"";
+  position:absolute;
+  left:0; bottom:-8px;
+  width:46px; height:3px;
+  border-radius:2px;
+  background:linear-gradient(90deg,#26c6da,#6ef3ff);
+}
+.right-panel ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0 0;
+  width:100%;
+}
+.right-panel ul li {
+  position: relative;
+  padding: 10px 10px 10px 34px;
+  line-height:1.45;
+  font-size: .88rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: background .25s, padding-left .25s;
+}
+.right-panel ul li:last-child { border-bottom:none; }
+.right-panel ul li:before {
+  content: "";
+  position:absolute;
+  left:12px; top:16px;
+  width:9px; height:9px;
+  border-radius:50%;
+  background: linear-gradient(135deg,#26c6da,#73efff);
+  box-shadow: 0 0 0 3px rgba(38,198,218,0.15);
+}
+.right-panel ul li:hover {
+  background: rgba(255,255,255,0.04);
+  padding-left: 38px;
+}
+.right-panel .disc-footer {
+  margin-top: 28px;
+  font-size: .7rem;
+  color:#8a8a8a;
+  text-align:center;
+  letter-spacing:.5px;
+  line-height:1.3;
+}
+.transactions-list ul {
+  padding-left: 20px;
+}
+
+.transactions-list li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.tab-content input {
+  padding: 10px;
+  width: calc(100% - 20px);
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.tab-content button {
+  padding: 10px 15px;
+  background-color: #1b1b2f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tab-content button:hover {
+  background-color: #3b3b5e;
+}
+
+.message {
+  margin-top: 20px;
+  color: green;
+  font-weight: bold;
+}
